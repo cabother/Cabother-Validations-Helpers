@@ -16,3 +16,5 @@ https://www.nuget.org/packages/Cabother.Validations.Helpers/
 | ThrowIfNullOrEmpty    | Valida se o valor do parâmetro é nulo ou inválido                           | ArgumentException           |
 | ThrowIfMinDateValue   | Valida se o valor do parâmetro no formato de data é inválido                | ArgumentNullException       |
 | ThrowIfListOutOfRange | Valida se o a quantidade de registros da lista está fora do range permitido | ArgumentOutOfRangeException |
+
+<a href="https://www.buymeacoffee.com/cabother" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a> 
