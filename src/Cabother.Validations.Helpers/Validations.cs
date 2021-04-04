@@ -18,16 +18,14 @@ namespace Cabother.Validations.Helpers
         }
 
         /// <summary>
-        /// Valida se o parâmetro foi informado
+        /// Valida se o parâmetro informado não está nulo
         /// </summary>
-        /// <param name="parameter">parâmetro validado</param>
-        /// <param name="name">Nome do parâmetro</param>
-        /// <param name="allowWhiteSpace">Se permite espaços vazios</param>
-        /// <exception cref="ArgumentNullException">Ocorre quando o parâmetro esta nulo ou vazio</exception>
-        public static void ThrowIfNull(this string parameter, string name, bool allowWhiteSpace = false)
+        /// <param name="parameter">Parâmetro a ser validado</param>
+        /// <param name="name">Nome do Parâmetro</param>
+        /// <exception cref="ArgumentNullException">Ocorre quando o parâmetro está nulo</exception>
+        public static void ThrowIfNull(this string parameter, string name)
         {
-            if ((!allowWhiteSpace && string.IsNullOrWhiteSpace(parameter)) ||
-                (allowWhiteSpace && string.IsNullOrEmpty(parameter)))
+            if (parameter == null)
                 throw new ArgumentNullException(name);
         }
 
@@ -41,6 +39,19 @@ namespace Cabother.Validations.Helpers
         {
             if (parameter == null)
                 throw new ArgumentNullException(name);
+        }
+
+        /// <summary>
+        /// Valida se o parâmetro foi informado
+        /// </summary>
+        /// <param name="parameter">parâmetro validado</param>
+        /// <param name="allowWhiteSpace">Se permite espaços vazios</param>
+        /// <exception cref="ArgumentNullException">Ocorre quando o parâmetro esta nulo ou vazio</exception>
+        public static void ThrowIfNull(this string parameter, bool allowWhiteSpace = false)
+        {
+            if ((!allowWhiteSpace && string.IsNullOrWhiteSpace(parameter)) ||
+                (allowWhiteSpace && string.IsNullOrEmpty(parameter)))
+                throw new ArgumentNullException(nameof(parameter));
         }
 
         /// <summary>
