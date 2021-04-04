@@ -3,11 +3,11 @@ using Xunit;
 
 namespace Cabother.Validations.Helpers.Test.ValidateTest
 {
-    public class ValidationTest : IClassFixture<Fixture>
+    public class ValidationStringTest : IClassFixture<Fixture>
     {
         private Fixture _fixture;
 
-        public ValidationTest(Fixture fixture)
+        public ValidationStringTest(Fixture fixture)
         {
             _fixture = fixture;
         }
