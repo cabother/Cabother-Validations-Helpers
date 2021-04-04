@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D8D7DC31-9EE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cabother.Validations.Helpers", "src\Cabother.Validations.Helpers\Cabother.Validations.Helpers.csproj", "{68EFAFAD-B797-4D6E-99C5-DF2D353A5010}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A2D03C72-F33C-4452-AF82-A6AC24153954}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cabother.Validations.Helpers.Test", "test\Cabother.Validations.Helpers.Test\Cabother.Validations.Helpers.Test.csproj", "{56CC66BC-714B-4EFA-8FCC-84602A27F0F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,8 +36,21 @@ Global
 		{68EFAFAD-B797-4D6E-99C5-DF2D353A5010}.Release|x64.Build.0 = Release|Any CPU
 		{68EFAFAD-B797-4D6E-99C5-DF2D353A5010}.Release|x86.ActiveCfg = Release|Any CPU
 		{68EFAFAD-B797-4D6E-99C5-DF2D353A5010}.Release|x86.Build.0 = Release|Any CPU
+		{56CC66BC-714B-4EFA-8FCC-84602A27F0F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56CC66BC-714B-4EFA-8FCC-84602A27F0F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56CC66BC-714B-4EFA-8FCC-84602A27F0F1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{56CC66BC-714B-4EFA-8FCC-84602A27F0F1}.Debug|x64.Build.0 = Debug|Any CPU
+		{56CC66BC-714B-4EFA-8FCC-84602A27F0F1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{56CC66BC-714B-4EFA-8FCC-84602A27F0F1}.Debug|x86.Build.0 = Debug|Any CPU
+		{56CC66BC-714B-4EFA-8FCC-84602A27F0F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56CC66BC-714B-4EFA-8FCC-84602A27F0F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56CC66BC-714B-4EFA-8FCC-84602A27F0F1}.Release|x64.ActiveCfg = Release|Any CPU
+		{56CC66BC-714B-4EFA-8FCC-84602A27F0F1}.Release|x64.Build.0 = Release|Any CPU
+		{56CC66BC-714B-4EFA-8FCC-84602A27F0F1}.Release|x86.ActiveCfg = Release|Any CPU
+		{56CC66BC-714B-4EFA-8FCC-84602A27F0F1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{68EFAFAD-B797-4D6E-99C5-DF2D353A5010} = {D8D7DC31-9EE5-479D-8C29-3B57A5F9F018}
+		{56CC66BC-714B-4EFA-8FCC-84602A27F0F1} = {A2D03C72-F33C-4452-AF82-A6AC24153954}
 	EndGlobalSection
 EndGlobal
