@@ -22,7 +22,7 @@ namespace Cabother.Validations.Helpers.Test.ValidateTest
             var exception = Assert.Throws<ArgumentNullException>(() => _fixture.Validation.ValidateObjectParamNull(null));
 
             //Then
-            Assert.Equal("Value cannot be null. (Parameter 'paramName')", exception.Message);
+            Assert.Equal("Value cannot be null. (Parameter 'param')", exception.Message);
         }
 
         [Fact]

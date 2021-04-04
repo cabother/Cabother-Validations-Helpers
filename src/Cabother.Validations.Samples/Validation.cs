@@ -7,6 +7,7 @@ namespace Cabother.Validations.Samples
     {
         bool ValidateStringParamNull(string param);
         bool ValidateObjectParamNull(object param);
+        bool ValidateIntegerParamOutOfRange(int param);
     }
 
     public class Validation : IValidation
@@ -16,17 +17,25 @@ namespace Cabother.Validations.Samples
 
         }
 
-        public bool ValidateStringParamNull(string paramName)
+        public bool ValidateStringParamNull(string param)
         {
-            paramName.ThrowIfNull(nameof(paramName));
+            param.ThrowIfNull(nameof(param));
             //... other method information
 
             return true;
         }
 
-        public bool ValidateObjectParamNull(object paramName)
+        public bool ValidateObjectParamNull(object param)
         {
-            paramName.ThrowIfNull(nameof(paramName));
+            param.ThrowIfNull(nameof(param));
+            //... other method information
+
+            return true;
+        }
+
+        public bool ValidateIntegerParamOutOfRange(int param)
+        {
+            param.ThrowIfOutOfRange(1, nameof(param));
             //... other method information
 
             return true;
