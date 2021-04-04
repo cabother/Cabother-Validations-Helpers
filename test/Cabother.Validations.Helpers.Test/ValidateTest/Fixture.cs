@@ -1,6 +1,6 @@
 using Cabother.Validations.Samples;
 
-namespace Cabother.Validations.Helpers.Test
+namespace Cabother.Validations.Helpers.Test.ValidateTest
 {
     public class Fixture
     {

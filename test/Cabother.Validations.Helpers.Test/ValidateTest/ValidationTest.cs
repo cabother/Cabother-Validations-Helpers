@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace Cabother.Validations.Helpers.Test
+namespace Cabother.Validations.Helpers.Test.ValidateTest
 {
     public class ValidationTest : IClassFixture<Fixture>
     {
