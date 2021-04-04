@@ -3,36 +3,36 @@ using Xunit;
 
 namespace Cabother.Validations.Helpers.Test.ValidateTest
 {
-    public class ValidationStringTest : IClassFixture<Fixture>
+    public class ValidationObjectTest : IClassFixture<Fixture>
     {
         private Fixture _fixture;
 
-        public ValidationStringTest(Fixture fixture)
+        public ValidationObjectTest(Fixture fixture)
         {
             _fixture = fixture;
         }
 
         [Fact]
-        public void ValidateStringParamNull_ParameterNull_ThrowsArgumentNullException()
+        public void ValidateObjectParamNull_ParameterNull_ThrowsArgumentNullException()
         {
             //Given
             _fixture.Reset();
 
             //When
-            var exception = Assert.Throws<ArgumentNullException>(() => _fixture.Validation.ValidateStringParamNull(null));
+            var exception = Assert.Throws<ArgumentNullException>(() => _fixture.Validation.ValidateObjectParamNull(null));
 
             //Then
             Assert.Equal("Value cannot be null. (Parameter 'paramName')", exception.Message);
         }
 
         [Fact]
-        public void ValidateStringParamNull_ValidParameter_ReturnsSuccess()
+        public void ValidateObjectParamNull_ValidParameter_ReturnsSuccess()
         {
             //Given
             _fixture.Reset();
 
             //When
-            var response = _fixture.Validation.ValidateStringParamNull("Cabother Validations String");
+            var response = _fixture.Validation.ValidateObjectParamNull("Cabother Validations Object");
 
             //Then
             Assert.True(response);

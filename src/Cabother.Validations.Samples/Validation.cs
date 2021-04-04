@@ -6,6 +6,7 @@ namespace Cabother.Validations.Samples
     public interface IValidation : IDisposable
     {
         bool ValidateStringParamNull(string param);
+        bool ValidateObjectParamNull(object param);
     }
 
     public class Validation : IValidation
@@ -16,6 +17,14 @@ namespace Cabother.Validations.Samples
         }
 
         public bool ValidateStringParamNull(string paramName)
+        {
+            paramName.ThrowIfNull(nameof(paramName));
+            //... other method information
+
+            return true;
+        }
+
+        public bool ValidateObjectParamNull(object paramName)
         {
             paramName.ThrowIfNull(nameof(paramName));
             //... other method information
