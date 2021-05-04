@@ -17,6 +17,12 @@ namespace Cabother.Validations.Samples
 
         }
 
+        public void ValidadeIfIsEntityNull(object param)
+        {
+            param.IsEntityNull(nameof(param));
+            //... other method information
+        }
+
         public bool ValidateStringParamNull(string param)
         {
             param.ThrowIfNull(nameof(param));

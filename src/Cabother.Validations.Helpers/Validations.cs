@@ -1,12 +1,24 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Cabother.Exceptions.Databases;
 using FluentValidation;
 
 namespace Cabother.Validations.Helpers
 {
     public static class Validations
     {
+        /// <summary>
+        /// Valida se entidade é nula após retorno de busca
+        /// </summary>
+        /// <param name="entity">Objeto a ser validado</param>
+        /// <param name="entityName">Nome da entidade</param>
+        public static void IsEntityNull(this object entity, string entityName)
+        {
+            if (entity is null)
+                throw new EntityNotFoundException(entityName);
+        }
+
         /// <summary>
         /// Valida se o método Dispose() foi invocado
         /// </summary>
