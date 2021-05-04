@@ -1,4 +1,5 @@
 using System;
+using Cabother.Exceptions.Databases;
 using Xunit;
 
 namespace Cabother.Validations.Helpers.Test.ValidateTest
@@ -10,6 +11,19 @@ namespace Cabother.Validations.Helpers.Test.ValidateTest
         public ValidationObjectTest(Fixture fixture)
         {
             _fixture = fixture;
+        }
+
+        [Fact]
+        public void ValidateObjectParamNull_ParameterNull_ThrowsEntityNotFoundException()
+        {
+            //Given
+            object myEntity = null;
+
+            //When
+            var exception = Assert.Throws<EntityNotFoundException>(() => myEntity.IsEntityNull(nameof(myEntity)));
+
+            //Then
+            Assert.Equal("myEntity not found", exception.Message);
         }
 
         [Fact]
