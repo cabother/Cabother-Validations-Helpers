@@ -31,6 +31,14 @@ namespace Cabother.Validations.Samples
             return true;
         }
 
+        public bool ValidateStringParamNullAndNotAllowWhiteSpace(string param)
+        {
+            param.ThrowIfNull(false);
+            //... other method information
+
+            return true;
+        }
+
         public bool ValidateObjectParamNull(object param)
         {
             param.ThrowIfNull(nameof(param));
@@ -46,6 +54,30 @@ namespace Cabother.Validations.Samples
 
             return true;
         }
+        
+        public bool ValidateDecimalParamOutOfRange(decimal param)
+        {
+            param.ThrowIfOutOfRange(1, nameof(param));
+            //... other method information
+
+            return true;
+        }
+
+        public bool ValidateLongParamOutOfRange(long param)
+        {
+            param.ThrowIfOutOfRange(1, nameof(param));
+            //... other method information
+
+            return true;
+        }
+
+        public bool ValidateLongParamOutOfRange(Guid param)
+        {
+            param.ThrowIfInvalid(nameof(param));
+            //... other method information
+
+            return true;
+        }        
 
         /// <inheritdoc cref="IDisposable.Dispose"/>
         public void Dispose()
